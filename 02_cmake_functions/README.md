@@ -1,6 +1,10 @@
-CMake Tutorial - 02: Custom CMake Functions
+# CMake Tutorial - 02: Custom CMake Functions
+
 This project provides a practical example of creating custom CMake functions to enable modular, reusable, and declarative build configurations, inspired by PX4's module system.
-📁 Project Structure
+
+## 📁 Project Structure
+
+```
 02_cmake_functions/
 ├── build/                    # Build output directory
 ├── cmake/                    # Custom CMake functions
@@ -15,16 +19,21 @@ This project provides a practical example of creating custom CMake functions to 
 │   ├── Controller.hpp
 │   └── CMakeLists.txt
 ├── CMakeLists.txt            # Top-level CMake configuration
+```
 
-🔧 Custom Function: create_module_library
-Defined in cmake/create_module_library.cmake, this function simplifies module creation by wrapping:
+## 🔧 Custom Function: `create_module_library`
 
-add_library
-target_include_directories
-target_link_libraries (for optional DEPENDS)
+Defined in `cmake/create_module_library.cmake`, this function simplifies module creation by wrapping:
 
-Example Usage
-In a module's CMakeLists.txt:
+- `add_library`
+- `target_include_directories`
+- `target_link_libraries` (for optional `DEPENDS`)
+
+### ✅ Example Usage
+
+In a module's `CMakeLists.txt`:
+
+```cmake
 # SensorModule
 create_module_library(
     MODULE SensorModule
@@ -39,35 +48,42 @@ create_module_library(
     SRCS Controller.cpp
     DEPENDS SensorModule
 )
+```
 
-🧪 How to Build
+## 🧪 How to Build
 
-From the project root:mkdir -p build
+From the project root:
+
+```bash
+mkdir -p build
 cd build
 cmake ..
 make
+```
 
+Expected output:
 
-Expected output:[ 50%] Built target SensorModule
+```
+[ 50%] Built target SensorModule
 [100%] Built target ControllerModule
+```
 
+## ✅ Learning Objectives
 
+- Parse custom function arguments with `cmake_parse_arguments`.
+- Create a reusable `create_module_library` function for modular builds.
+- Manage inter-module dependencies cleanly.
 
-✅ Learning Objectives
+## 📚 References
 
-Parse custom function arguments with cmake_parse_arguments.
-Create a reusable create_module_library function for modular builds.
-Manage inter-module dependencies cleanly.
+- [CMake `cmake_parse_arguments` Documentation](https://cmake.org/cmake/help/latest/command/cmake_parse_arguments.html)
+- PX4 `px4_add_module` Design
 
-📚 References
+## 📝 Prerequisites
 
-CMake cmake_parse_arguments Documentation
-PX4 px4_add_module Design
+- CMake 3.10 or higher
+- A C++ compiler (e.g., GCC, Clang)
 
-📝 Prerequisites
+## 🚀 Getting Started
 
-CMake 3.10 or higher
-A C++ compiler (e.g., GCC, Clang)
-
-🚀 Getting Started
 Clone the repository and follow the build instructions to explore custom CMake functions and modular build setups!
