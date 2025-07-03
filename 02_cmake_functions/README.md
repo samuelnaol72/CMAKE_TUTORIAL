@@ -9,7 +9,6 @@ This project provides a practical example of creating custom CMake functions to 
 ├── build/                    # Build output directory
 ├── cmake/                    # Custom CMake functions
 │   ├── create_module_library.cmake
-│   └── parse_function_args.cmake
 ├── SensorModule/             # Independent sensor module
 │   ├── Sensor.cpp
 │   ├── Sensor.hpp
