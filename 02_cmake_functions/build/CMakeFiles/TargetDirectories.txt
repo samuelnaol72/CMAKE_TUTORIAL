@@ -1,0 +1,8 @@
+/home/x/CMAKE_TUTORIAL/02_cmake_functions/build/CMakeFiles/edit_cache.dir
+/home/x/CMAKE_TUTORIAL/02_cmake_functions/build/CMakeFiles/rebuild_cache.dir
+/home/x/CMAKE_TUTORIAL/02_cmake_functions/build/SensorModule/CMakeFiles/SensorModule.dir
+/home/x/CMAKE_TUTORIAL/02_cmake_functions/build/SensorModule/CMakeFiles/edit_cache.dir
+/home/x/CMAKE_TUTORIAL/02_cmake_functions/build/SensorModule/CMakeFiles/rebuild_cache.dir
+/home/x/CMAKE_TUTORIAL/02_cmake_functions/build/ControllerModule/CMakeFiles/ControllerModule.dir
+/home/x/CMAKE_TUTORIAL/02_cmake_functions/build/ControllerModule/CMakeFiles/edit_cache.dir
+/home/x/CMAKE_TUTORIAL/02_cmake_functions/build/ControllerModule/CMakeFiles/rebuild_cache.dir
